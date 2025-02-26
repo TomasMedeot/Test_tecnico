@@ -1,0 +1,2 @@
+mysql
+golang==1.23.2
