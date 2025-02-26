@@ -9,6 +9,7 @@ The purpose of this project is to demonstrate knowledge and skills in working wi
 ## Code Structure
 
 ## Start Up
-
+- Be sure that the requirements are installed
+- Run in your Mysql "startup.sql" [SQL](db/startup.sql)
 ## Licence
 This project is licensed under the [MIT License](LICENSE).

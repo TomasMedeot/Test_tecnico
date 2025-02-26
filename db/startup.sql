@@ -13,7 +13,6 @@ CREATE TABLE user (
 CREATE TABLE post (
     id INT PRIMARY KEY AUTO_INCREMENT,
     user_id INT NOT NULL,
-    likes INT NOT NULL DEFAULT 0,
     content TEXT NOT NULL CHECK (LENGTH(content) >= 200),
     FOREIGN KEY (user_id) REFERENCES user(id)
 );
@@ -24,4 +23,12 @@ CREATE TABLE repost (
     post_id INT NOT NULL,
     FOREIGN KEY (user_id) REFERENCES user(id),
     FOREIGN KEY (post_id) REFERENCES post(id)
+);
+
+CREATE TABLE likes (
+  id INT PRIMARY KEY AUTO_INCREMENT,
+  user_id INT NOT NULL,
+  post_id INT NOT NULL,
+  FOREIGN KEY (user_id) REFERENCES user(id),
+  FOREIGN KEY (post_id) REFERENCES post(id)
 );
